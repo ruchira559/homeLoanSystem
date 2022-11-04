@@ -16,12 +16,6 @@ import com.barclays.homeloan.entity.SavingAccount;
 import com.barclays.homeloan.repository.SavingRepository;
 import com.barclays.homeloan.service.SavingService;
 
-/**
- * SavingsController(working::)
- * 
- * @author ace
- *
- */
 @RestController
 @RequestMapping("/saving")
 public class SavingsController {
@@ -33,9 +27,6 @@ public class SavingsController {
 	@Autowired
 	SavingService savingService;
 	
-	/**
-	 * logger
-	 */
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@GetMapping(value = SystemConstants.GET_ALL_ACCOUNT)
@@ -50,11 +41,6 @@ public class SavingsController {
 		}
 	}
 	
-	/**
-	 * addAccount(working::)
-	 * @param acc
-	 * @return
-	 */
 	@PostMapping(value = SystemConstants.ADD_SAVINGS_ACCOUNT)
 	public ResponseEntity<?> addAccount(@RequestBody SavingAccount acc) {
 		try {
