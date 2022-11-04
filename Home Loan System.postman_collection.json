@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "0f76d278-6023-4942-b103-31ed35d5958f",
+		"name": "Home Loan System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24165108"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ruchir\",\r\n    \"email\":\"aruchir063@gmail.com\",\r\n    \"paasword\":\"Uch1h@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "savingAccount",
+			"item": [
+				{
+					"name": "Add account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\":100079937986,\r\n    \"balance\":\"100000\",\r\n    \"email\":\"aruchir063@gmail.com\",\r\n    \"name\":\"ruchir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/saving/account/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saving",
+								"account",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/saving/account/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saving",
+								"account",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loanApplication",
+			"item": [
+				{
+					"name": "Apply for Loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\":\"raipur, C.G.\",\r\n    \"loanAmount\":\"1000000\",\r\n    \"tenure\":\"10\",\r\n    \"monthlySalary\":\"60000\",\r\n    \"email\":\"aruchir063@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/application/apply",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"application",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Home Loan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/application/validate/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"application",
+								"validate",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "repayment",
+			"item": [
+				{
+					"name": "Find EMI by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/repay/emi/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"repay",
+								"emi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export to CSV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/repay/emi/export/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"repay",
+								"emi",
+								"export",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay EMI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/repay/emi/pay/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"repay",
+								"emi",
+								"pay",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forepay EMI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/repay/emi/forepay/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"repay",
+								"emi",
+								"forepay",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prepay EMI",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"months\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/repay/emi/prepay/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"repay",
+								"emi",
+								"prepay",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
