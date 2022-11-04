@@ -107,9 +107,7 @@ public class RepaymentServiceImpl implements RepaymentService {
 			return "please enter correct tenure in months. The amount of remaining months are: "+lst.size();
 		}
 		float monthlyEmi = repay.getEmi();
-		/*if(lst.size()==months) {
-			return "Please enter tenure between 3 and "+String.valueOf(loan.getTenure()-months);
-		}*/
+		
 		if(months<3 && lst.size()>=3)
 		{
 			return "please enter tenure between 3 and "+lst.size();

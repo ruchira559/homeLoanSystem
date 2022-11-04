@@ -64,23 +64,9 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 		if (monthlySalary * 50 < app.getLoanAmount()) {
 			app.setStatus("Declined");
 			loanAppRepository.save(app);
-		/*	String body = "Dear Account Holder, \n\t We regret to inform you that your application for a home loan of ₹ "+ app.getLoanAmount()+" has not been approved by the bank."
-					+ "\nI hereby request you to please come by at our office to meet our Loan Officer, Mr. Abhishek Duklan, anytime during banking hours from Monday to Friday to complete all the formalities."
-					+ "\n\nLooking forward to see you.\n"
-					+ "\nThank you.\n"
-					+ "\nRegards,"
-					+ "\n Bank";
-			emailSenderService.sendEmail(app.getEmail(), "Loan Approval", body); */
 			return "Declined: loan should be less than monthlyincome*50";
 		}
 		app.setStatus("Approved");
-		/*String body = "Dear Account Holder, \n\t We are highly pleased to inform you that your application for a home loan of ₹ "+ app.getLoanAmount()+" has been approved by the bank."
-				+ "\nI hereby request you to please come by at our office to meet our Loan Officer, Mr. Abhishek Duklan, anytime during banking hours from Monday to Friday to complete all the formalities so that the loan amount can be credited to your account."
-				+ "\n\nLooking forward to see you.\n"
-				+ "\nThank you.\n"
-				+ "\nRegards,"
-				+ "\n Bank";
-		emailSenderService.sendEmail(app.getEmail(), "Loan Approval", body); */
 		createLoan(app);
 
 		return "Loan Approved Successfully !!";
